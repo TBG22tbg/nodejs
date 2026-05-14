@@ -8,7 +8,7 @@ function listarPedidos() {
     lista.innerHTML = "Carregando pedidos...";
 
     // Faz uma requisição GET para a API com a url dela publicada (ou local)
-    fetch(xxxxxxxx)
+    fetch("https://nodejs-zqz4.onrender.com/pedidos")
 
     // Converte a resposta da API para JSON
     .then(res => res.json())
@@ -46,7 +46,7 @@ function cadastrarPedido() {
     const produto = document.getElementById("produto").value;
 
     // Envia uma requisição POST para a API
-    fetch(xxxxxxxx, {
+    fetch("https://nodejs-zqz4.onrender.com/pedidos", {
         method: "POST",
         // Informa que os dados enviados estão no formato JSON
         headers: {
@@ -88,7 +88,7 @@ function atualizarPedido() {
     const status = document.getElementById("statusAtualizar").value
 
     // Envia uma requisição PUT para a API
-    fetch(xxxxxxxx, {
+    fetch("https://nodejs-zqz4.onrender.com/pedidos", {
         method: "PUT",
         headers: {
             'Content-Type': 'application/JSON'
@@ -124,7 +124,7 @@ function removerPedido() {
     // Pega o ID digitado
     const id = Number(document.getElementById("idRemover").value);
 
-    fetch(xxxxxxxx, {
+    fetch("https://nodejs-zqz4.onrender.com/pedidos", {
         method: "DELETE",
         headers: {
             'Content-Type': 'applicatin/JSON'
